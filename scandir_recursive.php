@@ -1,5 +1,4 @@
 <?php
-
 function scandir_recursive($path){
     $rii = new RecursiveIteratorIterator(new RecursiveDirectoryIterator($path));
 
