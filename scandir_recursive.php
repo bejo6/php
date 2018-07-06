@@ -1,4 +1,33 @@
 <?php
+/*
+Usage :
+
+$path = "/your/path";
+$list = scandir_recursive($path);
+print_r($list);
+
+Example Result :
+
+Array
+(
+    [file] => Array
+        (
+            [0] => /your/path/css/style.css
+            [1] => /your/path/css/bootstrap.css
+            [2] => /your/path/images/logo.png
+            [3] => /your/path/js/jquery.js
+            [4] => /your/path/js/script.js
+        )
+
+    [dir] => Array
+        (
+            [0] => /your/path/css
+            [1] => /your/path/images
+            [2] => /your/path/js
+        )
+)
+
+*/
 function scandir_recursive($path){
     $rii = new RecursiveIteratorIterator(new RecursiveDirectoryIterator($path));
 
